@@ -1,95 +1,86 @@
 
+var questions = [
+    {
+        question: "what does 'html' stand for?",
+        answers: [
+            {
+                answer: "Answer 1",
+                correct: "yes"
+            },
+            {
+                answer: "Answer 2",
+                correct: "no"
+            }, {
+                answer: "Answer 3",
+                correct: "no"
+            }
+        ]
+    }
+]
 
-var buttonEl = document.querySelector("#start");
-var answerEl = document.querySelector(".answer")
-
+var currentQuestion = 0;
 
 
 
 
 function startQuiz() {
-    document.querySelector("#first").style.display = "none";
-    document.querySelector("#question1").style.display = "initial";
+    $("#first").hide();
+    $("#question1").show();
 }
-
-buttonEl.addEventListener("click", startQuiz)
+$("#start").click(startQuiz);
 
 /*function answerQuestion1() {
-    document.querySelector("#question1").style.display = "none";
-    document.querySelector("#question2").style.display = "initial";
-}
-answerEl.addEventListener("click", answerQuestion1)*/
+    alert($(this).attr("data-correct"))
+    $("#question1").hide();
+    $("#question2").show();
+}*/
+$("#question1 .answer1").click(answerQuestion1)
 
+function answerQuestion1() {
+    var correct = $(this).data("correct");
+    if (correct === "yes") {
+        alert("correct answer!");
+    } else {
+        alert("incorrect answer!");
+    }
+    $("#question1").hide();
+    $("#question2").show();
+    currentQuestion++;
+    /*displayQUestion();*/
+}
+
+$("#question2 .answer2").click(answerQuestion2)
 function answerQuestion2() {
-    document.querySelector("#question2").style.display = "none";
-    document.querySelector("#question3").style.display = "initial";
+    var correct = $(this).data("correct");
+    if (correct === "yes") {
+        alert("correct answer!");
+    } else {
+        alert("incorrect answer!");
+    }
+    $("#question2").hide();
+    $("#question3").show();
 }
 
-function answerQuestion3() {
-    document.querySelector("#question3").style.display = "none";
-    document.querySelector("#question4").style.display = "initial";
-}
-
+$("#question3 .answer3").click(answerQuestion3)
 function answerQuestion4() {
-    document.querySelector("#question4").style.display = "none";
-    document.querySelector("#question5").style.display = "initial";
+    var correct = $(this).data("correct");
+    if (correct === "yes") {
+        alert("correct answer!");
+    } else {
+        alert("incorrect answer!");
+    }
+    $("#question3").hide();
+    $("#question4").show();
 }
 
-function scoreTracker() {
-
+$("#question4 .answer4").click(answerQuestion3)
+function answerQuestion4() {
+    var correct = $(this).data("correct");
+    if (correct === "yes") {
+        alert("correct answer!");
+    } else {
+        alert("incorrect answer!");
+    }
+    $("#question4").hide();
+    $("#question5").show();
 }
-
-let lis = document.querySelectorAll("li.answer1");
-
-let lis_array = Array.from(lis);
-
-lis.forEach(function (elem) {
-    elem.addEventListener("click", function () {
-        if (elem.dataset.correct === "yes") {
-            document.querySelector("#question1").style.display = "none";
-            document.querySelector("#question2").style.display = "initial";
-        }
-    })
-})
-
-/*function firstQuestion() {
-    lis = document.querySelectorAll("li.answer1");
-
-    let lis_array = Array.from(lis);
-
-    lis.forEach(function (elem) {
-        elem.addEventListener("click", function () {
-            if (elem.dataset.correct === "yes") {
-                document.querySelector("#question1").style.display = "none";
-                document.querySelector("#question2").style.display = "initial";
-            }
-        })
-    })
-}*/
-
-let lis = document.querySelectorAll("li.answer2");
-
-let lis_array = Array.from(lis);
-
-lis.forEach(function (elem) {
-    elem.addEventListener("click", function () {
-        if (elem.dataset.correct === "yes") {
-            document.querySelector("#question2").style.display = "none";
-            document.querySelector("#question3").style.display = "initial";
-        }
-    })
-})
-
-/*function secondQuestion() {
-    let lis = document.querySelectorAll("li.answer2")
-    let lis_array = Array.from(lis);
-    lis.forEach(function (elem) {
-        elem.addEventListener("click", function () {
-            if (elem.dataset.correct === "yes") {
-                document.querySelector("#question2").style.display = "none";
-                document.querySelector("#question3").style.display = "initial";
-            }
-        })
-    })
-
-}*/

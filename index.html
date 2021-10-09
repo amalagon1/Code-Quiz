@@ -7,21 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz!</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1>Coding Quiz Challenge!</h1>
-        <p>Answer all the questions within the alotted time and see your score at the end. Click the button below to
-            begin!</p>
-        <div>
+        <div id="first">
+            <h1>Coding Quiz Challenge!</h1>
+            <p>Answer all the questions within the alotted time and see your score at the end. Click the button below to
+                begin!</p>
+
             <button id="start">
                 <h2>Start</h2>
             </button>
         </div>
+        <div id="question1" class="question">
+            <h1>First question</h1>
+            <ul class="answer">
+                <li class="answer1" data-correct="yes">a. answer</li>
+                <l1 class="answer1" data-correct="no">b. answer</l1>
+                <li class="answer1" data-correct="no">c. answer</li>
+            </ul>
+        </div>
+        <div id="question2" class="question">
+            <h1>Second question</h1>
+            <ul>
+                <li class="answer2" data-correct="no">a. answer</li>
+                <li class="answer2" data-correct="no">b. answer</li>
+                <li class="answer2" data-correct="yes">c. answer</li>
+            </ul>
+        </div>
+        <div id="question3" class="question">
+            <h3>Third question</h3>
+            <ul>
+                <l1>a. answer</l1>
+                <li>b. answer</li>
+                <li>c. answer</li>
+            </ul>
+        </div>
+        <div id="question4" class="question">
+            <h3>Fourth question</h3>
+            <ul>
+                <l1>a. answer</l1>
+                <li>b. answer</li>
+                <li>c. answer</li>
+            </ul>
+        </div>
+        <div id="question5" class="question">
+            <h3>Fifth question</h3>
+            <ul>
+                <l1>a. answer</l1>
+                <li>b. answer</li>
+                <li>c. answer</li>
+            </ul>
+        </div>
+    </div>
+    <div id="scoreContainer">
+        <h2>This is your score!</h2>
+        <p>50%</p>
     </div>
 
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
