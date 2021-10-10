@@ -1,5 +1,5 @@
 
-var questions = [
+/*var questions = [
     {
         question: "what does 'html' stand for?",
         answers: [
@@ -18,14 +18,30 @@ var questions = [
     }
 ]
 
-var currentQuestion = 0;
+var currentQuestion = 0;*/
 
+var playerScore = 0;
+var startingMinutes = 1;
+let time = startingMinutes * 60;
+
+
+
+function updateCountdown() {
+    const countdownEl = document.getElementById("countdown");
+    setInterval(updateCountdown, 1000);
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    countdownEl.innerHTML = `${minutes}:${seconds}`;
+    time--;
+}
 
 
 
 function startQuiz() {
     $("#first").hide();
     $("#question1").show();
+    updateCountdown()
 }
 $("#start").click(startQuiz);
 
@@ -62,7 +78,7 @@ function answerQuestion2() {
 }
 
 $("#question3 .answer3").click(answerQuestion3)
-function answerQuestion4() {
+function answerQuestion3() {
     var correct = $(this).data("correct");
     if (correct === "yes") {
         alert("correct answer!");
@@ -73,7 +89,7 @@ function answerQuestion4() {
     $("#question4").show();
 }
 
-$("#question4 .answer4").click(answerQuestion3)
+$("#question4 .answer4").click(answerQuestion4)
 function answerQuestion4() {
     var correct = $(this).data("correct");
     if (correct === "yes") {
@@ -83,4 +99,16 @@ function answerQuestion4() {
     }
     $("#question4").hide();
     $("#question5").show();
+}
+
+$("#question5 .answer5").click(answerQuestion5)
+function answerQuestion5() {
+    var correct = $(this).data("correct");
+    if (correct === "yes") {
+        alert("correct answer!");
+    } else {
+        alert("incorrect answer!");
+    }
+    $("#question5").hide();
+    $("#scoreContainer").show();
 }
