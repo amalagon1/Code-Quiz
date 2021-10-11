@@ -1,44 +1,4 @@
 
-/*var questions = [
-    {
-        question: "what does 'html' stand for?",
-        answers: [
-            {
-                answer: "Answer 1",
-                correct: "yes"
-            },
-            {
-                answer: "Answer 2",
-                correct: "no"
-            }, {
-                answer: "Answer 3",
-                correct: "no"
-            }
-        ]
-    }
-]
-
-var currentQuestion = 0;*/
-
-/*var playerScore = 0;
-var startingMinutes = 1;
-let time = startingMinutes * 60;
-
-
-
-function updateCountdown() {
-    const countdownEl = document.getElementById("countdown");
-    setInterval(updateCountdown, 1000);
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    countdownEl.innerHTML = `${minutes}:${seconds}`;
-    time--;
-}*/
-
-/*function subtractTimer() {
-
-}*/
 
 function setTimer() {
     var minute = 0;
