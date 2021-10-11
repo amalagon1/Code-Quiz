@@ -20,7 +20,7 @@
 
 var currentQuestion = 0;*/
 
-var playerScore = 0;
+/*var playerScore = 0;
 var startingMinutes = 1;
 let time = startingMinutes * 60;
 
@@ -34,14 +34,30 @@ function updateCountdown() {
     seconds = seconds < 10 ? '0' + seconds : seconds;
     countdownEl.innerHTML = `${minutes}:${seconds}`;
     time--;
+}*/
+
+/*function subtractTimer() {
+
+}*/
+
+function setTimer() {
+    var minute = 0;
+    var sec = 60;
+    setInterval(function () {
+        document.getElementById("countdown").innerHTML = minute + " : " + sec;
+        sec--;
+        if (sec == 00 && minute == 00) {
+            window.alert("time's up!")
+
+        }
+    }, 1000);
 }
-
-
 
 function startQuiz() {
     $("#first").hide();
     $("#question1").show();
-    updateCountdown()
+    setTimer()
+
 }
 $("#start").click(startQuiz);
 
@@ -61,7 +77,7 @@ function answerQuestion1() {
     }
     $("#question1").hide();
     $("#question2").show();
-    currentQuestion++;
+    /*currentQuestion++;*/
     /*displayQUestion();*/
 }
 

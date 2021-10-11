@@ -3,10 +3,6 @@
     margin: auto;
 }
 
-/*#first {
-    ;
-}*/
-
 #scoreContainer {
     height: 25vh;
     width: 50%;
@@ -20,22 +16,8 @@
   
 }
 
-#question1 {
+#question1, #question2, #question3, #question4, #question5 {
     display: none;
 }
 
-#question2 {
-    display: none;
-}
 
-#question3 {
-    display: none;
-}
-
-#question4 {
-    display: none;
-}
-
-#question5 {
-    display: none;
-}

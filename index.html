@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <p id="countdown">1:00</p>
     <div class="container">
         <div id="first">
             <h1>Coding Quiz Challenge!</h1>
@@ -22,49 +23,49 @@
             </button>
         </div>
         <div id="question1" class="question">
-            <h1>First question</h1>
+            <h1>What does HTML stand for?</h1>
             <ul class="answer">
-                <li class="answer1" data-correct="yes">a. answer</li>
-                <l1 class="answer1" data-correct="no">b. answer</l1>
-                <li class="answer1" data-correct="no">c. answer</li>
+                <button class="answer1" data-correct="yes">a. hyper text markup language</button>
+                <button class="answer1" data-correct="no">b. hyper type markup language</button>
+                <button class="answer1" data-correct="no">c. heavy text markup language</button>
             </ul>
         </div>
         <div id="question2" class="question">
-            <h1>Second question</h1>
+            <h1>Who invented HTML?</h1>
             <ul>
-                <li class="answer2" data-correct="no">a. answer</li>
-                <li class="answer2" data-correct="no">b. answer</li>
-                <li class="answer2" data-correct="yes">c. answer</li>
+                <button class="answer2" data-correct="no">a. Bill Gates</button>
+                <button class="answer2" data-correct="no">b. Kanye West</button>
+                <button class="answer2" data-correct="yes">c. Sir Tim Berners-Lee</button>
             </ul>
         </div>
         <div id="question3" class="question">
-            <h3>Third question</h3>
+            <h3>Which programming language lets the user interact with elements on the page?</h3>
             <ul>
-                <l1>a. answer</l1>
-                <li>b. answer</li>
-                <li>c. answer</li>
+                <button class="answer3" data-correct="no">a. HTML</button>
+                <button class="answer3" data-correct="yes">b. Javascript</button>
+                <button class="answer3" data-correct="no">c. CSS</button>
             </ul>
         </div>
         <div id="question4" class="question">
-            <h3>Fourth question</h3>
+            <h3>Who invented Javascript?</h3>
             <ul>
-                <l1>a. answer</l1>
-                <li>b. answer</li>
-                <li>c. answer</li>
+                <button class="answer4" data-correct="no">a. Satoshi Nakamoto</button>
+                <button class="answer4" data-correct="yes">b. Brendan Eich</button>
+                <button class="answer4" data-correct="no">c. Barack Obama</button>
             </ul>
         </div>
         <div id="question5" class="question">
-            <h3>Fifth question</h3>
+            <h3>Which web browser includes developer tools?</h3>
             <ul>
-                <l1>a. answer</l1>
-                <li>b. answer</li>
-                <li>c. answer</li>
+                <button class="answer5" data-correct="no">a. Safari</button>
+                <button class="answer5" data-correct="no">b. Firefox</button>
+                <button class="answer5" data-correct="yes">c. Chrome</button>
             </ul>
         </div>
     </div>
     <div id="scoreContainer">
         <h2>This is your score!</h2>
-        <p>50%</p>
+        <p></p>
     </div>
 
     <script src="assets/js/script.js"></script>
